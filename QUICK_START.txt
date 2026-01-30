@@ -1,0 +1,202 @@
+╔═══════════════════════════════════════════════════════════════════════════════╗
+║                                                                               ║
+║                    🎯 GEKKOFINDER - QUICK START GUIDE                        ║
+║                                                                               ║
+╚═══════════════════════════════════════════════════════════════════════════════╝
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+⚡ LAUNCHING GEKKOFINDER
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Run the program:
+    python3 GekkoFinder.py
+
+Display help:
+    python3 GekkoFinder.py -h
+
+
+⌨️  KEY COMMANDS IN MAIN MENU
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Press:    What Happens:
+───────────────────────────────────────────────────────────────────────────────
+  0       → System Information & Security Analysis (check honeypots, open ports)
+  H       → Help Menu (comprehensive documentation)
+  C       → Custom Command Prompt (execute bash commands, view logs)
+  K       → Keyboard Shortcuts Menu (view all options)
+  I       → Ideas/Network Commands Reference (with K menu)
+  #       → Connect to Network (type network number, e.g., "1" then Enter)
+  Ctrl+C  → Exit Program
+
+
+🎯 MAIN FEATURES
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1️⃣  CUSTOM COMMAND PROMPT (Press C)
+
+   What it does: Execute bash commands directly from within GekkoFinder
+   
+   Available commands:
+   • logs         - View last 30 program logs
+   • ifconfig     - Network interface configuration
+   • netstat      - Show network statistics
+   • ping [addr]  - Test connectivity
+   • nslookup     - DNS queries
+   • exit         - Return to main menu
+   • Any bash command supported
+   
+   Example session:
+   $ logs
+   [Shows recent program activity]
+   
+   $ ifconfig
+   [Shows network interfaces]
+   
+   $ exit
+   [Returns to main menu]
+
+
+2️⃣  PROGRAM LOGGING (Access via Custom Command Prompt)
+
+   What it does: Records all user actions and program events
+   
+   Log file location: ~/.gekkofinder.log
+   
+   What gets logged:
+   • Program start/stop
+   • Menu access events
+   • Network connection attempts (success/failure)
+   • Command executions
+   • Error events
+   
+   View logs:
+   1. Press C (Custom Command Prompt)
+   2. Type: logs
+   3. View last 30 log entries
+   
+   Or manually:
+   • cat ~/.gekkofinder.log
+
+
+3️⃣  NETWORK COMMANDS REFERENCE (Press K, then I)
+
+   What it does: Shows 25+ network security testing commands with examples
+   
+   Commands included:
+   • Network scanning (nmap, arp-scan, masscan)
+   • Wireless testing (airmon-ng, airodump-ng, aircrack-ng)
+   • Traffic analysis (tcpdump, wireshark, tshark)
+   • DNS tools (nslookup, dig)
+   • Connectivity (ping, traceroute)
+   • Proxy/VPN setup
+   • Service management
+   
+   Each command shows:
+   • Syntax and parameters
+   • Usage example
+   • Security purpose explanation
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+💻 EXAMPLE WORKFLOW
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Step 1: Start Program
+   $ python3 GekkoFinder.py
+   [Displays available WiFi networks with security information]
+
+Step 2: Choose Your Action
+   
+   Option A - Check Network Safety:
+   $ 0
+   [Displays system info, honeypot detection, vulnerability analysis]
+
+   Option B - Execute Commands:
+   $ c
+   [Opens command prompt]
+   $ netstat -tuln
+   [Shows open ports]
+   $ logs
+   [Shows program activity]
+   $ exit
+   [Returns to main menu]
+
+   Option C - Learn About Security Tools:
+   $ k
+   [Shows keyboard shortcuts]
+   $ i
+   [Shows network commands reference with examples]
+
+   Option D - Connect to Network:
+   $ 1
+   [Connects to network #1, prompts for password if needed]
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🔍 UNDERSTANDING NETWORK INFORMATION
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Network Display Columns:
+
+  ID    | Network Name (SSID)
+  ──────────────────────────────────────────
+  1.    | MyHomeNetwork    | 95%  | WPA2  | Safe(S)
+  2.    | Airport_WiFi     | 72%  | WPA2  | Safe(S)
+  3.    | FreeWiFi_Trap    | 88%  | Open  | Trap(Y)  ⚠️  AVOID THIS!
+
+Understanding the columns:
+
+• Sec (Security): WEP < WPA < WPA2 < WPA3  (higher = safer)
+• Signal (%): 90-100 = Excellent, 50-70 = Good, <30 = Poor
+• HP/Trap (Y): NEVER CONNECT - Honeypot/malicious network detected
+• SS (Safety Score): S = Safe, X = Not Safe for that activity
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+⚠️  IMPORTANT NOTES
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+✓ Command Timeout: Commands have 10-second timeout to prevent hanging
+✓ Logging: All actions automatically logged to ~/.gekkofinder.log
+✓ Error Handling: All errors gracefully handled with user messages
+✓ Password Attempts: Maximum 3 password attempts before timeout
+✓ Non-Breaking: All new features preserve original functionality
+✓ Authorization: Always get permission before testing networks
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+📊 WHAT'S NEW IN THIS VERSION
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+✅ BUGS FIXED:
+   • Syntax errors in network connection code
+   • Indentation issues with password handling
+   • Malformed print statements
+   • Missing else statement logic
+
+✨ NEW FEATURES:
+   • Custom command prompt (press C) for bash command execution
+   • Program logging system with log viewer (type 'logs' in prompt)
+   • Network commands reference (press K, then I)
+   • Keyboard shortcuts menu for easy navigation
+
+🎯 USER IMPROVEMENTS:
+   • Better menu structure with K shortcut
+   • Direct bash access for power users
+   • Complete program audit trail via logs
+   • Educational reference for security tools
+   • Improved error messages and feedback
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Need help? Press H in the main menu for comprehensive documentation.
+
+Version 1.1 | GekkoFinder | 2026-01-31
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
