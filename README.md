@@ -1,3 +1,7 @@
+⚠️ LEGAL NOTICE
+This tool is for authorized network testing only.
+Unauthorized access to computer systems is illegal.
+Users are responsible for complying with all laws.
 ================================================================================
                               GEKKOFINDER v1.3.B
                    WiFi Network Security Assessment Tool
