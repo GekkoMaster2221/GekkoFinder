@@ -311,8 +311,8 @@ def detect_honeypot_trap(ssid, security_type):
     trap_status = "Y" if risk_score >= 5 else "X"
     
     return {
-        "HP": hp_status,
-        "Trap": trap_status,
+        "Insecure Network": hp_status,
+        "Controlled network": trap_status,
         "risk_score": risk_score
     }
 
