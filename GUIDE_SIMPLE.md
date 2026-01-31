@@ -12,7 +12,7 @@ python3 GekkoFinder.py
 
 | Key | What It Does |
 |-----|-------------|
-| **0** | Check network safety & honeypots |
+| **0** | Check network safety & interfered unsafe network (CUE) |
 | **H** | Help documentation |
 | **C** | Run bash commands & view logs |
 | **K** | Show all shortcuts |
@@ -30,7 +30,7 @@ python3 GekkoFinder.py
 - **Signal**: WiFi strength (0-100%)
 - **Sec**: Security type (WEP < WPA < WPA2 < WPA3)
 - **DNS**: Network filtering (0/DNS/Proxy/&)
-- **HP/Trap**: Honeypot detection (X=safe, Y=dangerous)
+- **CUE**: Interfered unsafe network detection (X=safe, Y=dangerous)
 - **SS (Safety Score)**: 
   - **S** = 🟢 Safe (green)
   - **X** = 🔴 Not safe (red)
@@ -73,7 +73,7 @@ $ exit              # Return to menu
 
 | Situation | What to Do |
 |-----------|-----------|
-| **HP or Trap = Y** | ⚠️ NEVER connect - malicious network |
+| **CUE = Y** | ⚠️ NEVER connect - malicious network |
 | **NU = X** | ❌ Not safe for any activity |
 | **NU = S, NU = X other scores** | ✓ OK for browsing only |
 | **Signal < 30%** | Move closer or pick different network |
@@ -114,4 +114,3 @@ logs                  # View program logs
 
 ## Version
 **GekkoFinder v1.3.B** - WiFi Security Scanner
-
