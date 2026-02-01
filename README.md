@@ -3,7 +3,7 @@
 This tool is for **authorized security testing only**. Unauthorized access is illegal. See [LEGAL_DISCLAIMER.md](LEGAL_DISCLAIMER.md) for full details.
 
 ================================================================================
-                              GEKKOFINDER v1.3.B
+                              GEKKOFINDER v2
                    WiFi Network Security Assessment Tool
 ================================================================================
 
